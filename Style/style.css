@@ -5,6 +5,7 @@
     --secondary-color: #e7e5e4;
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
      0 4px 6px -4px rgb(0 0 0 / 0.1);
+     --gray-m: #78716c;
 
 }
 
@@ -163,8 +164,11 @@ body{
     padding: 0;
 }
 
-.links > ul > li{
+ul > li{
     list-style: none;
+}
+
+.links > ul > li{
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -217,18 +221,19 @@ body{
     justify-content: space-between;
 }
 
-.card-title{
+.project > .cards > .card >.card-title{
     font-size: 1.3rem;
     margin-bottom: 0.25rem;
 }
 
-.card-text{
+.project > .cards > .card > .card-text{
     font-size: 1rem;
     display: -webkit-box;
     -webkit-line-clamp: 5; /* Number of lines to show */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: var(--gray-m);
 }
 
 .actions{
@@ -240,8 +245,60 @@ body{
 
 .announcement{
     list-style: none;
+    padding: 0.5rem 0;
+    border-bottom: 0.2rem solid var(--secondary-color);
 }
 
 .announcement:first-child{
     padding-top: 0;
+}
+
+.announcement:last-child{
+    border-bottom: 0;
+}
+
+
+.announcement > h5{
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.announcement > .card-text{
+    font-size: 0.8rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--gray-m);
+}
+
+.trending > .card{
+    min-height: 30vh;
+}
+
+.trending > .card > li{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.user-trend-img{
+    height:3.8rem;
+    width: 3.8rem;
+}
+
+.phrase{
+    color: var(--gray-m);
+    padding: 0;
+    margin: 0;
+    margin-top: 0.4rem;
+    font-size: 0.9rem;
+}
+
+.nickname{
+    padding: 0;
+    margin: 0;
+    font-size: 0.8rem;
 }
